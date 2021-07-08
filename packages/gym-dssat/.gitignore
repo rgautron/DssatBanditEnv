@@ -1,0 +1,15 @@
+/build/*
+/dist/*
+/*.egg-info/*
+*.OUT
+*.LST
+*.777
+*.csv
+!cultivars.csv
+!soils.csv
+*.MZ*
+!*.MZX
+*.WTH
+*.INH
+*.INP
+/__pycache__/*
