@@ -24,7 +24,7 @@ def empirical_cvar(samples, alpha):
 
 def moment_empirical_cvar(samples, alpha):
     """
-    Quantile 0 to alpha CVaR moment based estimator as described in https://arxiv.org/abs/1401.1123
+    Quantile 0 to alpha CVaR moment based estimator
     @param samples: i.i.d. samples
     @type samples: list, 1D
     @param alpha: CVaR's alpha level
@@ -34,7 +34,8 @@ def moment_empirical_cvar(samples, alpha):
     """
     sorted_samples = np.sort(samples)
     n = int(alpha * len(samples))
-    return samples[n] + 1 / alpha / len(samples) * (sorted_samples[:n] - samples[n]).sum()
+    quantile = sorted_samples[n]
+    return quantile - 1 / alpha / len(samples) * np.maximum(quantile-sorted_samples, 0).sum()
 
 
 def cvar_ci(samples, b_t, alpha, support, upper=True):

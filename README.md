@@ -1,4 +1,12 @@
 # Optimal Thompson Sampling strategies for support-aware CVaR bandits 2021 ICML submission repository
+
+***
+
+## *Meanwhile, a better adaptation of DSSAT for bandits/RL has been released. It allows to interact on a daily basis with DSSAT, in an MDP fashion trough an OpenAI gym environment, with better efficiency.*
+<center> <a href="https://gitlab.inria.fr/rgautron/gym_dssat_pdi"><img alt="gym-dssat" src="./gymDssatButton.png"></a> </center>
+
+***
+
 This respository contains:
 + A bandit-oriented [*Decision Support System for Agrotechnology Transfer* (DSSAT)](https://dssat.net/) fortran crop-model Python integration in an [OpenAI gym](https://gym.openai.com/) based [gym-dssat](#packagesgym_dssat) environment designed to be easily reused by researchers. An example of use is presented in [Section 4](#4-use-of-the-gym-dssat-integration).
 
